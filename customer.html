@@ -16,7 +16,7 @@
 
         /* Style the header */
         header {
-            background-color: #666;
+            background-color: #a8d8f8;
             padding: 30px;
             text-align: center;
             /* font-size: 35px; */
@@ -29,7 +29,7 @@
             width: 30%;
             height: 300px;
             /* only for demonstration, should be removed */
-            background: #ccc;
+            background: #f1f1f1;
             padding: 20px;
         }
 
@@ -57,7 +57,7 @@
 
         /* Style the footer */
         footer {
-            background-color: #777;
+            background-color: #a8d8f8;
             padding: 10px;
             text-align: center;
             color: white;
@@ -71,6 +71,16 @@
                 width: 100%;
                 height: auto;
             }
+        }
+
+        .flex-container {
+            display: flex;
+
+        }
+
+        .flex-container>div {
+            padding: 20px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -88,7 +98,71 @@
         </nav>
 
         <article>
-            
+            <div>
+                <div>
+                    <form action="">
+                        <label for="principal" name="principal">Principal</label><br>
+
+                        <label for="datefrom" name="datefrom">Date From</label>
+                        <input type="date"><br>
+
+                        <label for="">Current Date</label><br>
+
+                        <label for="">Date To </label>
+                        <input type="date"><br>
+
+                        <label for="">Shipping Status</label><br>
+                        <input type="checkbox" id="vehicle1" name="pending" value="Pending">
+                        <label for="">Pending</label>
+                        <input type="checkbox" id="vehicle1" name="completed" value="Completed">
+                        <label for="">Completed</label>
+                        <input type="checkbox" id="vehicle1" name="cancelled" value="Cancelled">
+                        <label for="">Cancelled</label><br>
+
+                        <input type="submit" value="Find">
+                        <input type="submit" value="Export">
+                    </form>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Created On</th>
+                            <th>Job</th>
+                            <th>Shipment</th>
+                            <th>Type</th>
+                            <th>Client</th>
+                            <th>Status</th>
+                            <th>Cancelled By</th>
+                            <th>Cancelled On</th>
+                        </tr>
+                        <tr>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table border="1">
+                        <tr>
+                            <th>Total Job</th>
+                            <th>Total Shipment</th>
+                            <th>Completed</th>
+                            <th>Pending</th>
+                            <th>Cancelled</th>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+
+
         </article>
     </section>
 
