@@ -2,117 +2,180 @@
 <html lang="en">
 
 <head>
-    <title>Test</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
         * {
-            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html,
+        body {
             margin: 0;
             padding: 0;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            height: 100%;
-        }
-
-        /* Style the header */
         header {
-            background-color: #666;
-            padding: 30px;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
             text-align: center;
-            /* font-size: 35px; */
-            color: white;
         }
 
-        /* Create two columns/boxes that floats next to each other */
-        nav {
-            float: left;
-            width: 30%;
-            height: 100vh;
-            /* only for demonstration, should be removed */
-            background: #ccc;
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 25%;
+            background-color: #ddd;
             padding: 20px;
+            box-sizing: border-box;
+            min-height: 100%;
         }
 
-        /* Style the list inside the menu */
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        article {
-            float: left;
+        section {
+            width: 75%;
             padding: 20px;
-            width: 70%;
-            background-color: #f1f1f1;
-            height: 100%;
-            /* only for demonstration, should be removed */
+            box-sizing: border-box;
+            min-height: 100%;
         }
 
-        /* Clear floats after the columns */
-        section::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Style the footer */
         footer {
-            background-color: #777;
-            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
             text-align: center;
-            color: white;
         }
 
-        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-        @media (max-width: 600px) {
-
-            nav,
-            article {
-                width: 100%;
-                height: auto;
-            }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 40%;
+            padding: 6px;
+            border-radius: 4px;
+            border: 1px solid gray;
         }
+
+        label {
+            display: block;
+            width: 100px;
+        }
+
+        .inline {
+            display: flex;
+            margin: 10px;
+            align-items: center;
+        }
+
+        .p5{
+            margin-right: 10px;
+        }
+
+        .btn {
+            margin: 0;
+            padding: 10px;
+            width: 40%;
+            border: 0;
+            border-radius: 5px;
+            background-color: #00a2ff;
+            color: #fff;
+        }
+
+        .btn:hover {
+            background-color: #0051ff;
+        }
+
+        fieldset{
+            height: 80%;
+        }
+
+        table{
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .t5{
+            margin-top: 50px;
+        }
+
     </style>
 </head>
 
 <body>
+
     <header>
-        <h2>Test</h2>
+        <h1>Your Website Header</h1>
     </header>
 
-    <section>
-        <nav>
-            <ul>
-                <li><a href="#">Link</a></li>
-            </ul>
-        </nav>
-        <article>
-            <input type="text" class="input" placeholder="Search here">
-            <button type="submit">Search</button>
-            <div style="overflow-x: auto; padding-top: 20px;">
-                <table border="1">
-                    <tr>
-                        <th>No.</th>
-                        <th>Customer Name</th>
-                    </tr>
-                    <tr>
-                        <th>1</th>
-                        <th>Test</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th> New Test</th>
-                    </tr>
-                </table>
-            </div>
-        </article>
-    </section>
+    <main>
+        <aside>
+            <h2>Sidebar</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section>
+            <h2>Main Content</h2>
+            <fieldset>
+                <div class="inline">
+                    <!-- <label class="label" for="search">Search:</label> -->
+                    <input class="p5" type="text" id="search" name="search" placeholder="Search">
+                    <input class="btn" type="submit" value="Search">
+                </div>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>Created On</th>
+                            <th>Job</th>
+                            <th>Shipment</th>
+                            <th>Type</th>
+                            <th>Client</th>
+                            <th>Status</th>
+                            <th>Cancelled By</th>
+                            <th>Cancelled On</th>
+                        </tr>
+                        <tr>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="t5">
+                    <table border="1">
+                        <tr>
+                            <th>Total Job</th>
+                            <th>Total Shipment</th>
+                            <th>Completed</th>
+                            <th>Pending</th>
+                            <th>Cancelled</th>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+        </section>
+    </main>
 
     <footer>
-        <p>Footer</p>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
 
 </body>

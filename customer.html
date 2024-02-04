@@ -2,179 +2,190 @@
 <html lang="en">
 
 <head>
-    <title>Test</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
         * {
-            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html,
+        body {
             margin: 0;
             padding: 0;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* Style the header */
         header {
-            background-color: #a8d8f8;
-            padding: 30px;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
             text-align: center;
-            color: black;
         }
 
-        /* Create two columns/boxes that float next to each other */
-        nav {
-            float: left;
-            width: 30%;
-            height: 100vh;
-            background: #89c4f5;
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 25%;
+            background-color: #ddd;
             padding: 20px;
+            box-sizing: border-box;
+            min-height: 100%;
         }
 
-        /* Style the list inside the menu */
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        article {
-            float: left;
+        section {
+            width: 75%;
             padding: 20px;
-            width: 70%;
-            background-color: #f1f1f1;
-            height: 100%;
+            box-sizing: border-box;
+            min-height: 100%;
         }
 
-        /* Clear floats after the columns */
-        section::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Style the footer */
         footer {
-            background-color: #a8d8f8;
-            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
             text-align: center;
-            color: black;
         }
 
-        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-        @media (max-width: 600px) {
-
-            nav,
-            article {
-                width: 100%;
-                height: auto;
-            }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 40%;
+            padding: 6px;
+            border-radius: 4px;
+            border: 1px solid gray;
         }
 
-        .flex-container {
-            display: flex;
+        label {
+            display: block;
+            width: 100px;
         }
 
-        .flex-container>div {
-            padding: 20px;
-            margin: 10px;
-        }
-
-        div.inline {
+        .inline {
             display: flex;
             margin: 10px;
+            align-items: center;
         }
 
-        fieldset{
+        .btn {
+            margin: 0;
             padding: 10px;
+            width: 40%;
+            border: 0;
+            border-radius: 5px;
+            background-color: #00a2ff;
+            color: #fff;
+        }
+
+        .btn:hover {
+            background-color: #0051ff;
         }
     </style>
 </head>
 
 <body>
+
     <header>
-        <h2>Test</h2>
+        <h1>Your Website Header</h1>
     </header>
 
-    <section>
-        <nav>
-            <ul>
-                <li><a href="#">Link</a></li>
-            </ul>
-        </nav>
+    <main>
+        <aside>
+            <h2>Sidebar</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-        <article>
+        <section>
+            <h2>Main Content</h2>
+            <fieldset>
+                <div class="inline">
+                    <label class="label" for="principal">Principal:</label>
+                    <input type="text" id="principal" name="principal" placeholder="Client's Name">
+                </div>
+
+                <div class="inline">
+                    <label for="currentdate">Current Date:</label>
+                    <input type="text" id="currentdate" name="currentdate" placeholder="Display Current Date and Time">
+                </div>
+
+                <div class="inline">
+                    <label for="datefrom">Date From:</label>
+                    <textarea id="date" name="datefrom" placeholder="Display Specific Date"></textarea>
+                </div>
+
+                <div class="inline">
+                    <label for="dateto">Date To:</label>
+                    <textarea id="dateto" name="dateto" placeholder="Display Specific Date"></textarea>
+                </div>
+
+                <div class="inline">
+                    <label for="shippingstatus">Shipping Status:</label>
+                    <input type="checkbox" id="pending" name="pending" value="pending">
+                    <label for="pending">Pending</label>
+                    <input type="checkbox" id="completed" name="completed" value="completed">
+                    <label for="completed">Completed</label>
+                    <input type="checkbox" id="cancelled" name="cancelled" value="cancelled">
+                    <label for="cancelled">Cancelled</label>
+
+                </div>
+
+                <input class="btn" type="submit" value="Find">
+                <input class="btn" type="submit" value="Export to Excel">
+            </fieldset>
+
             <div>
-                <div>
-                    <Fieldset>
-                        <form action="" method="post">
-                            <div class="inline">
-                                <label for="principal" name="principal">Principal</label>
-                                <label for="">Current Date</label>
-                            </div>
-                            <div class="inline">
-                                <label for="datefrom" name="datefrom">Date From</label>
-                                <input type="date">
-
-                                <label for="">Date To </label>
-                                <input type="date">
-                            </div>
-                            <div class="shipping">
-                                <label for="">Shipping Status</label>
-                                <input type="checkbox" id="vehicle1" name="pending" value="Pending">
-                                <label for="">Pending</label>
-                                <input type="checkbox" id="vehicle1" name="completed" value="Completed">
-                                <label for="">Completed</label>
-                                <input type="checkbox" id="vehicle1" name="cancelled" value="Cancelled">
-                                <label for="">Cancelled</label>
-                            </div>
-                            <input type="submit" value="Find">
-                            <input type="submit" value="Export">
-                        </form>
-                    </Fieldset>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th>Created On</th>
-                            <th>Job</th>
-                            <th>Shipment</th>
-                            <th>Type</th>
-                            <th>Client</th>
-                            <th>Status</th>
-                            <th>Cancelled By</th>
-                            <th>Cancelled On</th>
-                        </tr>
-                        <tr>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table border="1">
-                        <tr>
-                            <th>Total Job</th>
-                            <th>Total Shipment</th>
-                            <th>Completed</th>
-                            <th>Pending</th>
-                            <th>Cancelled</th>
-                        </tr>
-                    </table>
-                </div>
+                <table>
+                    <tr>
+                        <th>Created On</th>
+                        <th>Job</th>
+                        <th>Shipment</th>
+                        <th>Type</th>
+                        <th>Client</th>
+                        <th>Status</th>
+                        <th>Cancelled By</th>
+                        <th>Cancelled On</th>
+                    </tr>
+                    <tr>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                    </tr>
+                </table>
             </div>
-        </article>
-    </section>
+            <div>
+                <table border="1">
+                    <tr>
+                        <th>Total Job</th>
+                        <th>Total Shipment</th>
+                        <th>Completed</th>
+                        <th>Pending</th>
+                        <th>Cancelled</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>Footer</p>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
 
 </body>
